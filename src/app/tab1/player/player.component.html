@@ -1,0 +1,8 @@
+<ion-content #content padding class="chatPage">
+
+	<ion-item *ngFor="let key of player | keys">
+	    <ion-label>{{key | titlecase}}</ion-label>
+	    <ion-input type="text" [(ngModel)]="player[key]" name="title"></ion-input>
+	</ion-item>
+
+</ion-content>

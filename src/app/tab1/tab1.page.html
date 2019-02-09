@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-button (click)="openPlayer(0)">Create New Player</ion-button>
+    <div *ngFor="let player of playerList">
+       <ion-card (click)="openPlayer(player.player_id)">{{player.first_name}} {{player.last_name}}</ion-card>
+    </div>
+    <router-outlet></router-outlet>
+</ion-content>
